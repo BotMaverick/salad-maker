@@ -23,6 +23,7 @@
   left: 0;
   right: 0;
   width: 400px;
+  max-width: 95vw;
   max-height: 88vh;
   visibility: hidden;
 }
@@ -30,6 +31,12 @@
 .scrollableTable {
   max-height: 80vh;
   overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollableTable::-webkit-scrollbar {
+  display: none;
 }
 
 .ingredientsTable {
