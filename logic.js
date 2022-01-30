@@ -73,14 +73,18 @@ function showTable(typeOfData) {
   document.querySelector('.displayBoard').style.zIndex = 3;
   document.querySelector('.displayBoard').style.visibility = 'visible';
   var ingredientsDiv = document.querySelector('.displayBoard');
-  var table = `<table class='ingredientsTable'>
+  var table = `
+  <div class='scrollableTable'>
+    <div class='flexHeading'>
       ${function tableHeading(){
         var headings = "";
         for(i=0; i<functionDataTableHeadings.length; i++){
-          headings = headings.concat(`<th>${functionDataTableHeadings[i]}</th>`)
+          headings = headings.concat(`<div>${functionDataTableHeadings[i]}</div>`)
         }
         return headings;
       }()}
+    </div>
+    <table class='ingredientsTable'>
       ${function tables() {
         var data = "";
         for(i=0; i< Math.max.apply(null, functionDataLengths); i++){
@@ -97,9 +101,10 @@ function showTable(typeOfData) {
         return data;
       }()}
     </table>
-    <div class='closeDiv'>
-      <button onClick="closeTable()" class='closeButton'>Close</button>
-    </div>
+  </div>
+  <div class='closeDiv'>
+    <button onClick="closeTable()" class='closeButton'>Close</button>
+  </div>
   `;
   ingredientsDiv.innerHTML = table;
 }
