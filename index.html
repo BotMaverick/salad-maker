@@ -8,10 +8,12 @@
 		<div class='ingredients'></div>
 		<div class='displayBoard'></div>
 		<h2 align='center'>Salad Maker</h2>
-		<p>Click the button below to generate a random salad!</p>
-		<button onclick="createSalad()" class='generateSalad'>Make me a Salad!</button>
-		<button onclick="showTable('ingredients')" class='showIngredients'>Click to see ingredients</button>
-		<button onclick="showTable('saladLogs')" class='showIngredients'>Salad Logs</button>
+		<p class='description'>Click the button below to generate a random salad!</p>
+		<div class='mainButtons'>
+			<button onclick="createSalad()" class='generateSalad mButton'>Make me a Salad!</button>
+			<button onclick="showTable('ingredients')" class='showIngredients mButton'>All ingredients</button>
+			<button onclick="showTable('saladLogs')" class='showIngredients mButton'>Salad Logs</button>
+		</div>
 		<hr/>
 		<div id='recipie'></div>
 		<script src="./logic.js"></script>

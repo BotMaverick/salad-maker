@@ -27,9 +27,8 @@ function saladLogs() {
   return [tableHeadings, [dates, primaryIngredients, secondarySolidIngredients, secondaryDressings]];
 }
 
-
 function createSalad() {
-  var [primaryIngredients, secondaryDressings, secondarySolidIngredients] = ingredients();
+  var [primaryIngredients, secondaryDressings, secondarySolidIngredients] = ingredients()[1];
   var div = document.getElementById('recipie');
   var selectedSolidIngredients = [];
   var selectedToppings = [];
