@@ -49,7 +49,7 @@ function showIngredients() {
   document.querySelector('.ingredients').classList.add('open');
   document.querySelector('.ingredients').style.zIndex = 2;
   document.querySelector('.displayBoard').style.zIndex = 3;
-  document.querySelector('.displayBoard').hidden = false;
+  document.querySelector('.displayBoard').style.visibility = 'visible';
   var sizes = [primaryIngredients.length, secondarySolidIngredients.length, secondaryDressings.length];
   var ingredientsDiv = document.querySelector('.displayBoard');
   var table = `<table class='ingredientsTable'>
@@ -76,7 +76,7 @@ function showIngredients() {
         return data;
       }()}
     </table>
-    <button onClick="closeTable()">Close</button>
+    <button onClick="closeTable()" class='closeButton'>Close</button>
   `;
   console.log(table);
   ingredientsDiv.innerHTML = table;
@@ -86,5 +86,5 @@ function closeTable() {
   document.querySelector('.ingredients').classList.remove('open');
   document.querySelector('.ingredients').style.zIndex = -2;
   document.querySelector('.displayBoard').style.zIndex = -3;
-  document.querySelector('.displayBoard').hidden = true;
+  document.querySelector('.displayBoard').style.visibility = 'hidden';
 }

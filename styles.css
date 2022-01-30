@@ -28,6 +28,14 @@
   position: absolute;
   margin: auto;
   z-index: -2;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 400px;
+  height: 90vh;
+  overflow-y: scroll;
+  visibility: hidden;
 }
 
 .ingredientsTable {
@@ -37,4 +45,9 @@
 .ingredientsTable th, .ingredientsTable td {
   border: 1px solid black;
   padding: 8px;
+}
+
+.closeButton {
+  height: 30px;
+  width: 100px;
 }
