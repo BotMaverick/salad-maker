@@ -26,7 +26,6 @@
   max-height: 88vh;
   overflow-y: scroll;
   visibility: hidden;
-  border-top: 1px solid black;
 }
 
 .ingredientsTable {
