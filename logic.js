@@ -84,29 +84,30 @@ function showTable(typeOfData) {
         return headings;
       }()}
     </div>
-    <table class='ingredientsTable'>
+    <div class='ingredientsTable'>
       ${function tables() {
         var data = "";
         for(i=0; i< Math.max.apply(null, functionDataLengths); i++){
-          data = data.concat(`<tr>
+          data = data.concat(`<div class='tr'>
             ${function rows(){
               var rowData = "";
               for(j=0; j<functionData[1].length; j++){
-                rowData = rowData.concat(`<td>${functionData[1][j][i] ? functionData[1][j][i] : ''}</td>`)
+                rowData = rowData.concat(`<div>${functionData[1][j][i] ? functionData[1][j][i] : ''}</div>`)
               }
               return rowData;
             }()}
-          </tr>`);
+          </div>`);
         }
         return data;
       }()}
-    </table>
+    </div>
   </div>
   <div class='closeDiv'>
     <button onClick="closeTable()" class='closeButton'>Close</button>
   </div>
   `;
   ingredientsDiv.innerHTML = table;
+  modalTableBorder();
 }
 
 function closeTable() {
@@ -114,4 +115,18 @@ function closeTable() {
   document.querySelector('.ingredients').style.zIndex = -2;
   document.querySelector('.displayBoard').style.zIndex = -3;
   document.querySelector('.displayBoard').style.visibility = 'hidden';
+}
+
+function modalTableBorder() {
+  var rows = document.querySelectorAll('div.tr');
+  var count = 0;
+  rows.forEach(e => {
+    e.lastElementChild.style.borderRight = "1px solid black";
+    if(count === rows.length - 1){
+      [...e.children].forEach(r => {
+        r.style.borderBottom = "0px solid black";
+      })
+    };
+    count ++;
+  });
 }

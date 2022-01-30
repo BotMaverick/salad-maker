@@ -46,9 +46,19 @@
   table-layout: fixed;
 }
 
-.ingredientsTable td {
-  border: 1px solid black;
-  padding: 8px;
+div.tr {
+  display: flex;
+  flex: 1;
+  min-height: 40px;
+}
+
+div.tr div {
+  display: block;
+  flex: 1;
+  text-align: center;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 3px;
 }
 
 .closeButton {
@@ -86,6 +96,7 @@
   border-left: 1px solid black;
   border-bottom: 1px solid black;
   height: 40px;
+  font-weight: bold;
 }
 
 .mainButtons {
