@@ -52,13 +52,25 @@ div.tr {
   min-height: 40px;
 }
 
-div.tr div {
-  display: block;
+div.tr div:first-child {
+  display: inline-block;
   flex: 1;
   text-align: center;
   border-left: 1px solid black;
   border-bottom: 1px solid black;
   padding: 3px;
+  word-wrap: break-word;
+}
+
+div.tr div {
+  display: inline-block;
+  flex: 1;
+  text-align: center;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 3px;
+  word-wrap: break-word;
+  font-size: 90%;
 }
 
 .closeButton {
@@ -87,6 +99,16 @@ div.tr div {
 
 .flexHeading div:last-child {
   border-right: 1px solid black;
+}
+
+.flexHeading div:first-child {
+  flex: 1;
+  text-align: center;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  height: 40px;
+  font-weight: bold;
 }
 
 .flexHeading div {
