@@ -8,20 +8,24 @@ function ingredients () {
 
 function saladLogs() {
   var dates = [
-    '24/1/22',
-    '30/1/22'
+    '24/01/22',
+    '30/01/22',
+    '05/02/22'
   ];
   var primaryIngredients = [
     'Paneer, Vinegar, Pepper powder',
-    'Paneer, Green sprouted moong, Apple cider vinegar, Pepper powder'
+    'Paneer, Green sprouted moong, Apple cider vinegar, Pepper powder',
+    'Paneer, Vinegar, Pepper powder'
   ];
   var secondaryDressings = [
     'Mayonnaise, Jalapeno, Mix herbs',
-    'Mayonnaise, Jalapeno, Lettuce, Cherry tomato, Ranch dressing'
+    'Mayonnaise, Jalapeno, Lettuce, Cherry tomato, Ranch dressing',
+    'Ranch dressing, Jalapeno, Mix herbs'
   ];
   var secondarySolidIngredients = [
     'Tomato, Cucumber, Soya chunks',
-    'Sprouted matki, Red and Yellow Pepper, Cucumber'
+    'Sprouted matki, Red and Yellow Pepper, Cucumber',
+    'Tomato, Cucumber, Green Pepper (burnt), Sweet corn (boil + salt + halad)'
   ];
   var tableHeadings = ['Date', 'Main ingredients', 'Other ingredients', 'Dressings / Toppings'];
   return [tableHeadings, [dates, primaryIngredients, secondarySolidIngredients, secondaryDressings]];
