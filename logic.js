@@ -1,7 +1,7 @@
 function ingredients () {
   var primaryIngredients = ['Paneer', 'Green sprouted moong', 'Lemon / Vinegar', 'Pepper powder'];
-  var secondaryDressings = ['Chilli flakes', 'Mayonnaise', 'Olives', 'Jalapeno', 'Lettuce', 'Mint leaf', 'Javas', 'Macroni', 'Cherry tomato', 'Corriander', 'Salted peanuts', 'Ranch dressing', 'Mix herbs'];
-  var secondarySolidIngredients = ['Sprouted matki', 'Boiled potato', 'Chole (soft)', 'Rajma (soft)', 'Harbhara (soft)', 'Tomato', 'Red / Yellow Pepper', 'Green Pepper (Burnt)', 'Sweet corn', 'Zucchini', 'Tofu', 'Carrot', 'Cucumber', 'Moong dal (soft)', 'Soya chunks', 'Egg white'];
+  var secondaryDressings = ['Chilli flakes', 'Mayonnaise', 'Olives', 'Jalapeno', 'Lettuce', 'Mint leaf', 'Javas', 'Macroni', 'Cherry tomato', 'Corriander', 'Salted peanuts', 'Ranch dressing', 'Mix herbs', 'Herbs Vinaigrette'];
+  var secondarySolidIngredients = ['Sprouted matki', 'Boiled potato', 'Chole (soft)', 'Rajma (soft)', 'Harbhara (soft)', 'Tomato', 'Red / Yellow / Green Capsicum', 'Capsicum (Burnt)', 'Sweet corn', 'Zucchini', 'Tofu', 'Carrot', 'Cucumber', 'Moong dal (soft)', 'Soya chunks', 'Egg white', 'Broccoli', 'Red Cabbage'];
   var tableHeadings = ['Main ingredients', 'Other ingredients', 'Dressings / Toppings'];
   return [tableHeadings, [primaryIngredients, secondarySolidIngredients, secondaryDressings]];
 }
@@ -10,22 +10,30 @@ function saladLogs() {
   var dates = [
     '24/01/22',
     '30/01/22',
-    '05/02/22'
+    '05/02/22',
+    '06/03/22',
+    '23/04/22'
   ];
   var primaryIngredients = [
     'Paneer, Vinegar, Pepper powder',
     'Paneer, Green sprouted moong, Apple cider vinegar, Pepper powder',
-    'Paneer, Vinegar, Pepper powder'
+    'Paneer, Vinegar, Pepper powder',
+    'Paneer, Pepper powder',
+    'Paneer, Pepper powder'
   ];
   var secondaryDressings = [
     'Mayonnaise, Jalapeno, Mix herbs',
     'Mayonnaise, Jalapeno, Lettuce, Cherry tomato, Ranch dressing',
-    'Ranch dressing, Jalapeno, Mix herbs'
+    'Ranch dressing, Jalapeno, Mix herbs',
+    'Mayonnaise, Red jalapeno, Green jalapeno, Ranch Dressing, Cherry tomato, Mix herbs',
+    'Mayonnaise, Ranch dressing, Herbs Vinaigrette, Green jalapeno, Red jalapeno, Cherry tomato, Mix herbs'
   ];
   var secondarySolidIngredients = [
     'Tomato, Cucumber, Soya chunks',
     'Sprouted matki, Red and Yellow Pepper, Cucumber',
-    'Tomato, Cucumber, Green Pepper (burnt), Sweet corn (boil + salt + halad)'
+    'Tomato, Cucumber, Green Pepper (burnt), Sweet corn (boil + salt + halad)',
+    'Green capsicum, Red capsicum, yellow capsicum, Sweet corn (boil + salt + turmeric), Mushroom (pan fry), Cucumber',
+    'Green capsucim, Red capsicum, yellow capsicum, sweet corn (boil + salt + turmeric), Mushroom (pan fry), Cucumber, Broccoli'
   ];
   var tableHeadings = ['Date', 'Main ingredients', 'Other ingredients', 'Dressings / Toppings'];
   return [tableHeadings, [dates, primaryIngredients, secondarySolidIngredients, secondaryDressings]];
@@ -36,12 +44,12 @@ function createSalad() {
   var div = document.getElementById('recipie');
   var selectedSolidIngredients = [];
   var selectedToppings = [];
-  for(i=0; i<3; i++){
+  for(i=0; i<5; i++){
     var random = Math.floor(Math.random() * secondarySolidIngredients.length);
     selectedSolidIngredients.push(secondarySolidIngredients[random]);
     secondarySolidIngredients.splice(random, 1);
   }
-  for(i=0; i<3; i++){
+  for(i=0; i<6; i++){
     var random = Math.floor(Math.random() * secondaryDressings.length);
     selectedToppings.push(secondaryDressings[random]);
     secondaryDressings.splice(random, 1);
